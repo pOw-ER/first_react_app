@@ -1,11 +1,11 @@
 import './App.css';
-
+import Navbar from "./components/navbar"
 function App() {
   const test = 34;
   const isAuth = true;
   return (// yalnizca bir tane parent element yazabiliriz icine örengin burda bir div var ve altina istedigimiz kadar children element ekleyebiliirz ancak ikinci bir ana element olusturamayiz.
     <div className="container">
-      <h4>App Component</h4>
+      <Navbar/>
 
       {/* <h4>{1+1}</h4>
       <h4>{"murat".toUpperCase()}</h4>
