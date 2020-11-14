@@ -1,4 +1,4 @@
-
+import User from "./components/User"
 import './App.css';
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   const isAuth = true;
   return (// yalnizca bir tane parent element yazabiliriz icine örengin burda bir div var ve altina istedigimiz kadar children element ekleyebiliirz ancak ikinci bir ana element olusturamayiz.
     <div className="App">
-      <h4>{1+1}</h4>
+      {/* <h4>{1+1}</h4>
       <h4>{"murat".toUpperCase()}</h4>
       <h4>{test}</h4>
       <div>
@@ -14,7 +14,11 @@ function App() {
           isAuth ? <p>Kullanici kayitli</p>
           : null
         }
-      </div>
+      </div> */}
+      <h4>App Component</h4>
+      <User/>
+      <User/>
+      <User/>
     </div>
   );
 }
