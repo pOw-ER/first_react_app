@@ -2,8 +2,8 @@ import './App.css';
 import Navbar from "./components/navbar"
 import User from "./components/User"
 function App() {
-  const test = 34;
-  const isAuth = true;
+  // const test = 34;
+  // const isAuth = true;
   return (// yalnizca bir tane parent element yazabiliriz icine örengin burda bir div var ve altina istedigimiz kadar children element ekleyebiliirz ancak ikinci bir ana element olusturamayiz.
     <div className="container">
       <Navbar title="User App"/>

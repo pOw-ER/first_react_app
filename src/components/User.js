@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'; // impt ile kisa yoldan eklenebilir
+
 
 // bu sekilde de olabilir
 
@@ -18,6 +20,11 @@ import React, { Component } from 'react'
 
 // Destructing yapisi ile
 class User extends Component {
+  static defaultProps = { // default propslar asagidaki gibi de bu sekilde static olarak ta yazilabilinir
+    name : "Keine Information",
+    salary : "Keine Information",
+    department : "Keine Information"
+  }
   render() {
     //Destructing
     const {name,salary,department} = this.props; // = sonrasina nereden alacagimizi yaziyoruz this.props tan aliyoruz
@@ -31,6 +38,18 @@ class User extends Component {
       </div>
     )
   }
+}
+
+// User.defaultProps = {
+//   name : "Keine Information",
+//   salary : "Keine Information",
+//   department : "Keine Information"
+// }
+
+User.propTypes = {
+  name : PropTypes.string.isRequired,
+  salary : PropTypes.string.isRequired,
+  department : PropTypes.string.isRequired
 }
 
 export default User;
