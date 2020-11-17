@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; // impt ile kisa yoldan eklenebilir
 
-
 // bu sekilde de olabilir
 
 // class User extends Component {
@@ -29,12 +28,16 @@ class User extends Component {
     //Destructing
     const {name,salary,department} = this.props; // = sonrasina nereden alacagimizi yaziyoruz this.props tan aliyoruz
     return (
-      <div>
-        <ul>
-          <li>Name : {name} </li>
-          <li>Abteilung : {salary}</li>
-          <li>Gehalt : {department}</li>
-        </ul>
+      <div className = "col-md-8 mb-4">
+        <div className="card">
+          <div className="card-header d-flex justify-content-between">
+            <h4 className="d-inline">{name}</h4>
+            <i className="far fa-trash-alt" style={{cursor : "pointer"}}></i>
+          </div>
+          <div className = "card-body">
+            <p className="card-text">Gehalt : {salary}</p>
+          </div>
+        </div>
       </div>
     )
   }
