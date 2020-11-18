@@ -34,9 +34,12 @@ class User extends Component {
   //   this.onClickEvent = this.onClickEvent.bind(this);
   // }
   // arrow functionla bind islemi yapmadan calistirdik ve user objemiz geldi.
+
+
   onClickEvent = (e) => {
-    console.log(this);
-    console.log("test");
+    this.setState({
+      isVisible : !this.state.isVisible
+    })
   }
 
   // onClickEvent(e){ // onclick sonrasi asagida bind yaparsak bu sekilde
