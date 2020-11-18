@@ -36,6 +36,7 @@ class User extends Component {
           </div>
           <div className = "card-body">
             <p className="card-text">Gehalt : {salary}</p>
+            <p className="card-text">Abteilung : {department}</p>
           </div>
         </div>
       </div>
