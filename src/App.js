@@ -27,6 +27,11 @@ class App extends Component {
       }
     ]
   }
+  deleteUser = (id) => { // bu silme fonksiyonunu props olrak users a geciemmiz gerekir. bunun icin asagida users kismina ekliycem
+    this.setState({
+      users : this.state.users.filter(user => id !== user.id)
+    })
+  }
 
   render(){
   return (// yalnizca bir tane parent element yazabiliriz icine örengin burda bir div var ve altina istedigimiz kadar children element ekleyebiliirz ancak ikinci bir ana element olusturamayiz.
@@ -34,6 +39,7 @@ class App extends Component {
       <Navbar title="User App"/>
       <hr/>
       <Users
+        deleteUser= {this.deleteUser}
         users = {this.state.users}
       />
       {/* <h4>{1+1}</h4>
