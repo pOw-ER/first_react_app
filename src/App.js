@@ -4,29 +4,7 @@ import Navbar from "./components/navbar";
 import Users from "./components/Users";
 
 class App extends Component {
-  state = { // biz state olusturduk. bunu props olrak users a aktaricaz. bu normalde kullnamaamiz gereken bir yöntem ama ögrenmek icin yapiyoruz
 
-    users : [
-      {
-        id:1,
-        name: "Enes Yilmaz",
-        salary : "5000",
-        department : "Informatik"
-      },
-      {
-        id:2,
-        name: "Büsra Yilmaz",
-        salary : "5000",
-        department : "Lehrerin"
-      },
-      {
-        id:3,
-        name: "Enes Kement",
-        salary : "6000",
-        department : "Gebäudetechniker"
-      }
-    ]
-  }
   deleteUser = (id) => { // bu silme fonksiyonunu props olrak users a geciemmiz gerekir. bunun icin asagida users kismina ekliycem
     this.setState({
       users : this.state.users.filter(user => id !== user.id)
